@@ -28,6 +28,6 @@ if __name__ == '__main__':
                                   readFile.get_nodeList(), readFile.get_blockNumber())
     beta = input('输入beta值(在0.8~0.9之间选择，默认为0.85):')
     if not beta.isdigit() or int(beta) <= 0:
-        beta = 15
+        beta = 0.85
     blockStripePR.pagerank(beta)
     print('计算pagerank score用时: ', time.time() - start_time, '秒')
