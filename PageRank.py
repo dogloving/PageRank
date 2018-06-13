@@ -19,6 +19,8 @@ if __name__ == '__main__':
     block_num = input('输入要划分的块(默认为15):')
     if not block_num.isdigit() or int(block_num) <= 0:
         block_num = 15
+    else:
+        block_num = int(block_num)
     readFile.read_file(filename, block_num)
     print('读取文件并分块用时: ', time.time()-start_time, '秒')
 
@@ -29,5 +31,8 @@ if __name__ == '__main__':
     beta = input('输入beta值(在0.8~0.9之间选择，默认为0.85):')
     if not beta.isdigit() or int(beta) <= 0:
         beta = 0.85
+    else:
+        beta = float(beta)
     blockStripePR.pagerank(beta)
     print('计算pagerank score用时: ', time.time() - start_time, '秒')
+    input('按下任何按钮退出程序')

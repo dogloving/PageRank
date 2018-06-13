@@ -44,9 +44,8 @@ class BlockStripePR():
         score_id = sorted(score_id, reverse=True)
         with open('result.txt', 'w') as f:
             print('Top 100的页面ID和score分别为:')
-            for i in range(self.nodes_num):
-                if i < 100:
-                    print(str(score_id[i][1]) + '\t' + str(score_id[i][0]))
+            for i in range(100):
+                print(str(score_id[i][1]) + '\t' + str(score_id[i][0]))
                 f.write(str(score_id[i][1]) + '\t' + str(score_id[i][0]) + '\n')
 
     def calculate(self):
